@@ -1,0 +1,10 @@
+services:
+  postgres:
+    container_name: api-tcc-waste-control
+    image: postgres
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=waste-control-api
