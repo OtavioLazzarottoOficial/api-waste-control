@@ -34,7 +34,7 @@ model User {
   roles     RolesType
   meals     Meal[]
 
-  @@map("users ")
+  @@map("users")
 }
 
 model Category {
@@ -92,13 +92,13 @@ model MealItem {
 
 model Waste {
   id         String     @id @default(uuid())
-  quantity   Int
+  quantity   Decimal    @db.Decimal(10, 2)
   reason     ReasonType
   createdAt  DateTime   @default(now()) @map("created_at")
   updatedAt  DateTime?  @updatedAt @map("updated_at")
   mealItemId String     @map("meal_item_id")
 
-  mealItem MealItem @relation(fields: [mealItemId], references: [id])
+  mealItem MealItem @relation(fields: [mealItemId], references: [id], onDelete: Cascade)
 
   @@map("wastes")
 }

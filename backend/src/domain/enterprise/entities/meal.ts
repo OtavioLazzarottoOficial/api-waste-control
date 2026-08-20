@@ -4,8 +4,8 @@ import { Optional } from '@/core/types/optional';
 import { MealItem } from './meal-item';
 
 export enum TurnsType {
-  AFTERNOON = 'Almoco',
-  DINNER = 'Janta',
+  AFTERNOON = 'AFTERNOON',
+  DINNER = 'DINNER',
 }
 
 export interface MealProps {

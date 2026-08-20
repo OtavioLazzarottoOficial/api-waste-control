@@ -3,9 +3,9 @@ import { UniqueEntityID } from '@/core/entities/unique-entity-id';
 import { Optional } from '@/core/types/optional';
 
 export enum ReasonType {
-  LEFTOVER = 'Sobrou',
-  ITSPOILED = 'Estragou',
-  ERROR_PREPARATION = 'Erro no Preparo',
+  LEFTOVER = 'LEFTOVER',
+  ITSPOILED = 'ITSPOILED',
+  ERROR_PREPARATION = 'ERROR_PREPARATION',
 }
 
 export interface WasteProps {

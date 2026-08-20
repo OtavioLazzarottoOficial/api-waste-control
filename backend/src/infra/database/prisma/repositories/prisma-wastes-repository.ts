@@ -67,13 +67,13 @@ export class PrismaWastesRepository implements WastesRepository {
     return wastes.map((raw) => {
       return WasteWithDetails.create({
         wasteId: new UniqueEntityID(raw.id),
-        quantity: raw.quantity,
-        reason: raw.reason as unknown as ReasonType,
+        quantity: typeof raw.quantity === 'number' ? raw.quantity : Number(raw.quantity),
+        reason: raw.reason as ReasonType,
         createdAt: raw.createdAt,
         foodName: raw.mealItem.food.name,
         categoryName: raw.mealItem.food.category.name,
         mealDate: raw.mealItem.meal.date,
-        mealTurn: raw.mealItem.meal.turn as unknown as TurnsType,
+        mealTurn: raw.mealItem.meal.turn as TurnsType,
         quantityServed: raw.mealItem.quantityServed.toNumber(),
         quantityConsumed: raw.mealItem.quantityConsumed.toNumber(),
       });

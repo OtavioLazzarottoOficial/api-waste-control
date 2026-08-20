@@ -39,7 +39,7 @@ export class PrismaMealMapper {
       id: meal.id.toString(),
       date: meal.date,
       userId: meal.userId.toString(),
-      turn: meal.turn as unknown as PrismaTurnsType,
+      turn: meal.turn as PrismaTurnsType,
       createdAt: meal.createdAt,
       updatedAt: meal.updatedAt,
     };

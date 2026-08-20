@@ -11,7 +11,7 @@ export class PrismaWasteMapper {
     return Waste.create(
       {
         mealItemId: new UniqueEntityID(raw.mealItemId),
-        quantity: raw.quantity,
+        quantity: typeof raw.quantity === 'number' ? raw.quantity : Number(raw.quantity),
         reason: raw.reason as ReasonType,
         createdAt: raw.createdAt,
         updatedAt: raw.updatedAt,
@@ -25,7 +25,7 @@ export class PrismaWasteMapper {
       id: waste.id.toString(),
       mealItemId: waste.mealItemId.toString(),
       quantity: waste.quantity,
-      reason: waste.reason as unknown as PrismaReasonType,
+      reason: waste.reason as PrismaReasonType,
       createdAt: waste.createdAt,
       updatedAt: waste.updatedAt,
     };
