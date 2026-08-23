@@ -1,7 +1,9 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "api-waste-control.railway.internal",
+  baseURL:
+    import.meta.env.VITE_API_URL ||
+    "https://api-waste-control.railway.internal",
 });
 
 // Injeta o token em todas as requisições
@@ -30,5 +32,5 @@ api.interceptors.response.use(
       window.location.href = "/";
     }
     return Promise.reject(error);
-  },
+  }
 );

@@ -7,7 +7,6 @@ import { useAuth } from "../contexts/auth-context";
 import { translateError } from "../helpers/translateError";
 
 async function auth(data: Authenticate): Promise<string> {
-  console.log(data)
   const response = await api.post("/sessions", data);
   return response.data.access_token;
 }
