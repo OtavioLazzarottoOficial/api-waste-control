@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./pages/login";
+//import Login from "./pages/login";
 import Dashboard from "./pages/page-dashboard";
 import LayoutMain from "./pages/layout-main";
 import Category from "./pages/page-category";
@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          <Route index element={<Login />} />
+          <Route index element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route element={<PrivateRoute />}>
             <Route element={<LayoutMain />}>
