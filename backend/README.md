@@ -21,7 +21,7 @@ MealItem -  Alimento por refeicao
 - [X] Realizar o UseCase de Create, Delete, Update, GetById, FindByMany para WASTE
 - [X] Realizar o UseCase de Create, Delete, Update, GetById, FindByMany para USER
 - [X] Reaizar a AUTENTICAO
-- [X] Realizar o tratamento de Erros
+- [X] Realizar o tratamento de Erros//
 
 
 - FRAMEWORK NESTJS
