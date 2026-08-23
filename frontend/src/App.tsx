@@ -18,9 +18,9 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route index element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route element={<PrivateRoute />}>
             <Route element={<LayoutMain />}>
-              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/category" element={<Category />} />
               <Route path="/food" element={<Food />} />
               <Route path="/meals" element={<Meal />} />
