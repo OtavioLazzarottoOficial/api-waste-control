@@ -3,7 +3,7 @@ import axios from "axios";
 export const api = axios.create({
   baseURL:
     import.meta.env.VITE_API_URL ||
-    "https://api-waste-control.railway.internal",
+    "https://api-waste-control-production.up.railway.app",
 });
 
 // Injeta o token em todas as requisições
