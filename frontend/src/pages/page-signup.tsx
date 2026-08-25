@@ -91,8 +91,8 @@ function SignUp() {
               </Button>
               <Button
                 type="button"
-                color="bg-slate-200"
-                className="text-slate-900 hover:bg-slate-300"
+                color="bg-zinc-600"
+                className="text-slate-900"
                 onClick={() => navigate("/dashboard")}
                 disabled={isPending}
               >

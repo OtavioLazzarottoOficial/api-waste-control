@@ -192,7 +192,7 @@ function Meal() {
                 </div>
 
                 <div className="flex flex-row gap-2 self-end sm:self-auto">
-                  <Button type="button" color="bg-gray-400">
+                  <Button type="button" color="bg-zinc-500">
                     <Link to={`/food-details/${meal.id}`}>Detalhes</Link>
                   </Button>
 

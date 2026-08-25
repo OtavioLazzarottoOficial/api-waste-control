@@ -333,9 +333,8 @@ function FoodDetails() {
                     <div className="flex flex-row gap-2 self-end sm:self-auto">
                       <Button
                         type="button"
-                        textColor="black"
-                        className="text-sm border font-light"
-                        color="bg-white"
+                        className="text-sm font-light"
+                        color="bg-zinc-500"
                         onClick={() => {
                           setReportingItemId(item.id!);
                           setWaste(Number(item.quantityServed) - Number(item.quantityConsumed));
